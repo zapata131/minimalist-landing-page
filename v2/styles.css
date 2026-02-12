@@ -332,6 +332,8 @@ body.light-mode .project-card:hover {
   height: 50px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+    /* Remove underline */
 }
 
 body.light-mode .social-links a {
