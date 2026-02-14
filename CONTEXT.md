@@ -8,7 +8,7 @@ Personal landing page for **José Luis Zapata** (zapata131).
 
 ## Key Links & Projects
 - **BufferBuffer**: Technical writing blog (`bufferbuffer.com`).
-- **Technical Writing Links**: Curated resources (`technicalwriting.link`).
+- **Technical Writing Resources**: Curated resources (`technicalwriting.link`).
 - **La Matatena**: Board game blog/YouTube (`la-matatena.com`).
 - **Socials**: 
     - **Bluesky**: `@zapata131.bsky.social` (Primary)
