@@ -474,6 +474,17 @@ body.geocities-mode .project-card h3 {
   color: #ff00ff !important;
 }
 
+body.geocities-mode p,
+body.geocities-mode span:not(.divider) {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+body.geocities-mode .cta a {
+  background: yellow !important;
+  color: red !important;
+  font-weight: bold !important;
+}
 @keyframes blink {
   50% { opacity: 0; }
 }
