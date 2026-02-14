@@ -337,6 +337,35 @@ body.light-mode .project-card:hover {
   background-color: rgba(255, 255, 255, 0.05);
   text-decoration: none;
     /* Remove underline */
+  position: relative;
+  }
+  
+  /* Tooltips */
+  .social-links a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--current-line);
+    color: var(--foreground);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-family: var(--font-main);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed);
+    pointer-events: none;
+    border: 1px solid var(--purple);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-links a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 body.light-mode .social-links a {
@@ -385,4 +414,76 @@ body.light-mode .social-links a {
     height: 45px;
     font-size: 1.5rem;
   }
+}
+/* GeoCities Easter Egg Mode */
+body.geocities-mode {
+  background-color: #0000ff !important;
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'), linear-gradient(45deg, #ff00ff, #00ffff) !important;
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  color: #ffff00 !important;
+}
+
+body.geocities-mode .background-animation {
+  display: none;
+}
+
+body.geocities-mode .card {
+  background: #c0c0c0 !important;
+  border: 4px outset #ffffff !important;
+  border-radius: 0 !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+  color: #000000 !important;
+  backdrop-filter: none !important;
+}
+
+body.geocities-mode h1, 
+body.geocities-mode h2, 
+body.geocities-mode h3 {
+  font-family: serif !important;
+  color: #000080 !important;
+  text-decoration: underline !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+}
+
+body.geocities-mode .highlight {
+  color: #ff0000 !important;
+  animation: blink 1s infinite steps(1);
+}
+
+body.geocities-mode .roles {
+  color: #008000 !important;
+  font-weight: bold !important;
+}
+
+body.geocities-mode .social-links a {
+  background: #808080 !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 0 !important;
+  color: #ffff00 !important;
+}
+
+body.geocities-mode .project-card {
+  background: #ffffff !important;
+  border: 2px inset #c0c0c0 !important;
+  border-radius: 0 !important;
+  color: #0000ff !important;
+}
+
+body.geocities-mode .project-card h3 {
+  color: #ff00ff !important;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+body.geocities-mode a {
+  color: #0000ff !important;
+  text-decoration: underline !important;
+}
+
+body.geocities-mode a:hover {
+  color: #ff0000 !important;
+  background: #ffff00 !important;
 }
