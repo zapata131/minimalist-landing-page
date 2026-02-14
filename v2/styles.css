@@ -21,21 +21,21 @@
 body.light-mode {
   --bg-color: #f8f8f2;
   --current-line: #e6e6e6;
-  /* Lighter gray for light mode */
+    /* Lighter gray for light mode */
   --foreground: #282a36;
   --comment: #6272a4;
-  --cyan: #00b4d8;
-  /* Darker cyan for contrast */
-  --green: #2a9d8f;
-  /* Darker green */
-  --orange: #e76f51;
-  /* Darker orange */
-  --pink: #d62828;
-  /* Darker red/pink */
-  --purple: #7b2cbf;
-  /* Darker purple */
-  --red: #d00000;
-  --yellow: #f4a261;
+  --cyan: #008ebe;
+    /* Deeper cyan */
+    --green: #218c74;
+    /* Deeper green */
+    --orange: #d35400;
+    /* Deeper orange */
+    --pink: #d63384;
+    /* Magenta-pink instead of blood red */
+    --purple: #6a36bc;
+    /* Royal purple */
+    --red: #c0392b;
+    --yellow: #d4ac0d;
 }
 
 * {
