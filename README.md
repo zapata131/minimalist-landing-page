@@ -1,22 +1,47 @@
 # Modern Minimalist Landing Page (Dracula Edition)
 
+<div align="center">
+  <img src="assets/preview.png" alt="Project Screenshot" width="800">
+
+  <br>
+
+  [![FTP Deploy](https://github.com/zapata131/minimalist-landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/zapata131/minimalist-landing-page/actions/workflows/deploy.yml)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![GitHub last commit](https://img.shields.io/github/last-commit/zapata131/minimalist-landing-page)](https://github.com/zapata131/minimalist-landing-page/commits/master)
+  [![GitHub issues](https://img.shields.io/github/issues/zapata131/minimalist-landing-page)](https://github.com/zapata131/minimalist-landing-page/issues)
+  
+  <br>
+
+  <h3>
+    <a href="https://zapata131.com">🔴 Live Demo</a>
+    <span> | </span>
+    <a href="https://github.com/zapata131/minimalist-landing-page/issues">🐛 Report Bug</a>
+    <span> | </span>
+    <a href="https://github.com/zapata131/minimalist-landing-page/pulls">✨ Request Feature</a>
+  </h3>
+</div>
+
+---
+
 A premium, minimalist landing page template featuring the **Dracula color palette**, glassmorphism aesthetics, and a responsive design. Built with vanilla HTML, CSS, and JavaScript.
 
 ## ✨ Features
 
-- 🎨 **Modern Aesthetics**: Sleek glassmorphism effects and modern typography.
-- 🌗 **Dark/Light Mode**: Full theme support with system preference detection and persistence.
-- 📱 **Fully Responsive**: Optimized for everything from mobile phones up to high-res desktops.
-- 🦋 **Social Integration**: Clean icon layout using **Font Awesome 6** (including the native Bluesky icon).
-- 🏗️ **Featured Work**: Built-in grid section for highlighting your top projects.
-- 🏷️ **Interactive Tooltips**: Animated hover labels for all social links.
-- 🐣 **GeoCities Easter Egg**: A secret 90s retro mode (click on the header title!).
+| Feature | Description |
+| :--- | :--- |
+| **🎨 Modern Aesthetics** | Sleek glassmorphism effects and modern typography. |
+| **🌗 Dark/Light Mode** | Full theme support with system preference detection and persistence. |
+| **📱 Fully Responsive** | Optimized for everything from mobile phones up to high-res desktops. |
+| **🦋 Social Integration** | Clean icon layout using **Font Awesome 6** (including native Bluesky). |
+| **🏗️ Featured Work** | Built-in grid section for highlighting your top projects. |
+| **🏷️ Interactive Tooltips** | Animated hover labels for all social links. |
+| **🐣 Easter Egg** | A secret 90s retro mode (try clicking the header title!). |
 
 ## 🛠️ Tech Stack
 
 - **HTML5**: Semantic and accessible structure.
 - **CSS3**: Modern layouts with Flexbox and Grid, CSS Variables for theming, and smooth animations.
-- **JavaScript**: Lightweight, vanilla logic for theme switching and the easter egg.
+- **JavaScript**: Lightweight vanilla logic for theme switching and easter eggs.
 - **Font Awesome 6**: Premium icons.
 - **Google Fonts**: Inter (Body) & Fira Code (Technical roles).
 
@@ -27,7 +52,7 @@ A premium, minimalist landing page template featuring the **Dracula color palett
    git clone https://github.com/zapata131/minimalist-landing-page.git
    ```
 2. **Open `index.html`**:
-   Simply open the file in any modern web browser. No build steps required.
+   Simply open the file in any modern web browser. No complex build steps required!
 
 ## 🎨 Customization Guide
 
@@ -52,13 +77,16 @@ The site uses **CSS Variables** in `styles.css`. You can easily change the globa
 Uses Font Awesome classes. Simply swap the class (e.g., `fab fa-github`) in the social links section.
 
 ## 📂 Project Structure
+
 ```text
 ├── index.html   # Main Landing Page
 ├── styles.css   # Theme variables, animations, and responsive layout
 ├── script.js    # Theme toggle and easter egg logic
+├── assets/      # Project images (screenshots, etc.)
 ├── icons/       # Favicon and local font assets
 └── CONTEXT.md   # Project metadata and keywords
 ```
 
 ## 📜 License
+
 This project is under the **MIT License**. Feel free to use and adapt it for your own personal or professional portfolio!
