@@ -379,6 +379,31 @@ body.light-mode .social-links a {
   box-shadow: 0 5px 15px rgba(189, 147, 249, 0.3);
 }
 
+.quote-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--comment);
+  opacity: 0.8;
+  text-align: center;
+}
+
+.quote-footer cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.light-mode .quote-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .card {
