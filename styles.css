@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
   overflow-x: hidden;
   position: relative;
 }
@@ -113,7 +113,7 @@ body.light-mode #theme-toggle:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 24px;
-  padding: 3rem;
+  padding: 2rem;
   width: 100%;
   text-align: center;
   animation: fadeInUp 0.8s ease-out;
@@ -142,9 +142,9 @@ body.light-mode .card {
 
 /* Typography */
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.05em;
+  font-size: 3rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
   font-weight: 800;
 }
 
@@ -166,8 +166,40 @@ h1 {
   transform: skewX(-15deg);
 }
 
+/* Header Tooltip */
+#easter-egg-trigger {
+  position: relative;
+}
+
+#easter-egg-trigger::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--current-line);
+  color: var(--foreground);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: var(--font-main);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-speed);
+  pointer-events: none;
+  border: 1px solid var(--purple);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+#easter-egg-trigger:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
 .profile-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .roles {
@@ -188,16 +220,16 @@ h1 {
 
 .bio {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--foreground);
   /* Changed from fixed color to variable for light mode support */
   opacity: 0.9;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .bio p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .bio strong {
@@ -244,15 +276,15 @@ h1 {
 
 /* Projects Section */
 .projects {
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: left;
 }
 
 .projects h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+    margin-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
   color: var(--pink);
   font-family: var(--font-code);
 }
@@ -260,7 +292,7 @@ h1 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .project-card {
@@ -316,7 +348,7 @@ body.light-mode .project-card:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
     /* Reduced from 2rem */
     padding-top: 0;
     /* Removed padding */
@@ -380,11 +412,11 @@ body.light-mode .social-links a {
 }
 
 .quote-footer {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+    padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--comment);
   opacity: 0.8;
   text-align: center;
