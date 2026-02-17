@@ -32,7 +32,7 @@ A premium, minimalist landing page template featuring the **Dracula color palett
 | **🎨 Modern Aesthetics** | Sleek glassmorphism effects and modern typography. |
 | **🌗 Dark/Light Mode** | Full theme support with system preference detection and persistence. |
 | **📱 Fully Responsive** | Optimized for everything from mobile phones up to high-res desktops. |
-| **🦋 Social Integration** | Clean icon layout using **Font Awesome 6** (including native Bluesky). |
+| **🦋 Social Integration** | Clean icon layout using **Font Awesome 6**. |
 | **🏗️ Featured Work** | Built-in grid section for highlighting your top projects. |
 | **🏷️ Interactive Tooltips** | Animated hover labels for all social links. |
 | **🐣 Easter Egg** | A secret 90s retro mode (try clicking the header title!). |
