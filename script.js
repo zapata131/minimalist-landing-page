@@ -35,11 +35,10 @@ function enableDarkMode() {
     icon.classList.add('fa-moon');
 }
 
-// Easter Egg: GeoCities Mode
+// Easter Egg: Redirect to ZapataOS
 const easterEggTrigger = document.getElementById('easter-egg-trigger');
 easterEggTrigger.addEventListener('click', () => {
-    body.classList.toggle('geocities-mode');
-    console.log('Welcome to 1996!');
+    window.location.href = 'desktop/index.html';
 });
 
 // Random Quote Footer

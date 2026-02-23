@@ -22,6 +22,8 @@
         <div class="dropdown-divider"></div>
         <div class="dropdown-item">Settings</div>
         <div class="dropdown-item" id="reboot-os">Reboot...</div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item" id="exit-os">Exit ZapataOS</div>
       </div>
     </div>
     <div class="menubar-item">System
@@ -56,7 +58,7 @@
       <div class="modal-header">System Notification</div>
       <div class="modal-body" id="modal-text">Welcome to ZapataOS. All systems operational.</div>
       <div class="modal-footer">
-        <button class="modal-btn" id="modal-ok">Acknowledge</button>
+        <button class="modal-btn" id="modal-ok">OK</button>
       </div>
     </div>
   </div>
@@ -76,6 +78,11 @@
     <div class="icon" data-window="socials-window" style="top: 230px; right: 30px;">
       <i class="fas fa-broadcast-tower"></i>
       <div class="icon-text">Network</div>
+    </div>
+
+    <div class="icon" id="return-icon" style="bottom: 130px; right: 30px;">
+      <i class="fas fa-door-open"></i>
+      <div class="icon-text">Return</div>
     </div>
 
     <div class="icon" id="trash-icon" style="bottom: 30px; right: 30px;">
@@ -122,9 +129,9 @@
           <span>> Board Games Fan</span>
         </div>
         <p>I currently work for <strong>Google Germany</strong>, write about my (mis)adventures as a tech writer at <a
-            href="https://bufferbuffer.com" target="_blank">BufferBuffer</a>, maintain <a
-            href="https://technicalwriting.link" target="_blank">technicalwriting.link</a>, and talk about board games
-          with my wife on <a href="https://la-matatena.com" target="_blank">La Matatena</a>.</p>
+            href="https://bufferbuffer.com" target="_blank" rel="noopener noreferrer">BufferBuffer</a>, maintain <a
+            href="https://technicalwriting.link" target="_blank" rel="noopener noreferrer">technicalwriting.link</a>, and talk about board games
+          with my wife on <a href="https://la-matatena.com" target="_blank" rel="noopener noreferrer">La Matatena</a>.</p>
       </div>
     </div>
 
@@ -138,15 +145,16 @@
       </div>
       <div class="window-content projects-list">
         <div class="project-item">
-          <h3><a href="https://bufferbuffer.com" target="_blank">BufferBuffer</a></h3>
+          <h3><a href="https://bufferbuffer.com" target="_blank" rel="noopener noreferrer">BufferBuffer</a></h3>
           <p>The (mis)adventures of a technical writer. Featuring "Minimum Viable Documentation" and more.</p>
         </div>
         <div class="project-item">
-          <h3><a href="https://technicalwriting.link" target="_blank">Technical Writing Resources</a></h3>
+          <h3><a href="https://technicalwriting.link" target="_blank" rel="noopener noreferrer">Technical Writing Resources</a>
+          </h3>
           <p>A curated timeline of resources for technical writers: Blogs, Books, Courses, and Videos.</p>
         </div>
         <div class="project-item">
-          <h3><a href="https://la-matatena.com" target="_blank">La Matatena</a></h3>
+          <h3><a href="https://la-matatena.com" target="_blank" rel="noopener noreferrer">La Matatena</a></h3>
           <p>Board game reviews, analysis, and YouTube channel (in Spanish).</p>
         </div>
       </div>

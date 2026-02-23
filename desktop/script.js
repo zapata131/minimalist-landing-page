@@ -59,10 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
     showModal('ZapataOS Kernel v1.0.4\n[Network Architecture Edition]\n\nLoaded: identity.exe, b-sides.log, network.sh\nStatus: STABLE');
   });
 
-  document.getElementById('reboot-os').addEventListener('click', () => {
-    showModal('System signal: SIGREBOOT\nEntering maintenance mode...');
-    setTimeout(() => location.reload(), 2000);
+  // Return to Normal Mode redirection
+  const exitAction = () => {
+    window.location.href = '../index.html';
+  };
+
+  document.getElementById('exit-os')?.addEventListener('click', exitAction);
+
+  // Return icon on desktop (Double click to trigger portal)
+  const returnIcon = document.getElementById('return-icon');
+  returnIcon?.addEventListener('dblclick', exitAction);
+
+  // Single click to select
+  returnIcon?.addEventListener('mousedown', (e) => {
+    e.stopPropagation();
+    icons.forEach(i => i.classList.remove('selected'));
+    returnIcon.classList.add('selected');
   });
+
+  // Ensure all links in bio open in new tab
+  document.querySelectorAll('.bio .text-link, .bio .social-links a').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+
+  // Update dblclick for external icons if they exist
+  // (Currently B-Sides and Network open windows, but we can make them open URLs if needed)
+  // For now, let's ensure any future external links added through icons open in new tabs.
 
   // App shortcuts in menu
   document.getElementById('open-id')?.addEventListener('click', () => {
