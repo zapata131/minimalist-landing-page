@@ -30,11 +30,21 @@
         <div class="dropdown-item">Log Viewer</div>
       </div>
     </div>
+    <div class="menubar-item">View
+      <div class="dropdown">
+        <div class="dropdown-item pattern-ctrl" data-pattern="dither">Dithered (Default)</div>
+        <div class="dropdown-item pattern-ctrl" data-pattern="grid">Grid Points</div>
+        <div class="dropdown-item pattern-ctrl" data-pattern="slate">Classic Slate</div>
+        <div class="dropdown-item pattern-ctrl" data-pattern="terminal">Terminal Black</div>
+      </div>
+    </div>
     <div class="menubar-item">Apps
       <div class="dropdown">
         <div class="dropdown-item" id="open-id">Identity.exe</div>
         <div class="dropdown-item" id="open-bsides">B-Sides.log</div>
         <div class="dropdown-item" id="open-network">Network.sh</div>
+        <div class="dropdown-item" id="open-terminal">Terminal.exe</div>
+        <div class="dropdown-item" id="roll-dice">Dice Roller (2d6)</div>
       </div>
     </div>
     <div class="menubar-item">Tools</div>
@@ -68,7 +78,33 @@
       <div class="icon-text">Network</div>
     </div>
 
+    <div class="icon" id="trash-icon" style="bottom: 30px; right: 30px;">
+      <i class="fas fa-trash"></i>
+      <div class="icon-text">Trash</div>
+    </div>
+
     <!-- Windows -->
+    <!-- Terminal Window -->
+    <div class="window" id="terminal-window" style="top: 300px; left: 600px; width: 500px; display: none;">
+      <div class="title-bar">
+        <div class="title-text">terminal.exe</div>
+        <div class="title-controls">
+          <div class="title-bar-btn min-btn"></div>
+          <div class="title-bar-btn close-btn"></div>
+        </div>
+      </div>
+      <div class="window-content terminal-content" id="terminal-output">
+        <p>ZapataOS [Version 1.0.4]</p>
+        <p>(c) 2026 Zapata Corp. All rights reserved.</p>
+        <p>&nbsp;</p>
+        <p>Type 'help' to see available commands.</p>
+        <div class="terminal-input-line">
+          <span>z:\></span>
+          <input type="text" id="terminal-input" autofocus>
+        </div>
+      </div>
+    </div>
+
     <div class="window" id="bio-window" style="top: 80px; left: 80px; width: 400px; display: flex;">
       <div class="title-bar">
         <div class="title-text">Identity.exe</div>

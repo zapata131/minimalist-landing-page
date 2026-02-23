@@ -78,6 +78,82 @@ document.addEventListener('DOMContentLoaded', () => {
     bringToFront(socials);
   });
 
+  const terminal = document.getElementById('terminal-window');
+  document.getElementById('open-terminal')?.addEventListener('click', () => {
+    terminal.style.display = 'flex';
+    bringToFront(terminal);
+    document.getElementById('terminal-input').focus();
+  });
+
+  // Terminal Logic
+  const terminalInput = document.getElementById('terminal-input');
+  const terminalOutput = document.getElementById('terminal-output');
+
+  terminalInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const cmd = terminalInput.value.trim().toLowerCase();
+      terminalInput.value = '';
+
+      const line = document.createElement('p');
+      line.innerHTML = `z:\\> ${cmd}`;
+      terminalOutput.insertBefore(line, terminalInput.parentElement);
+
+      let response = '';
+      if (cmd === 'help') response = 'Available commands: help, whoami, ls, clear, hack, date';
+      else if (cmd === 'whoami') response = 'User: Zapata | Permissions: Superuser | Role: Technical Writer';
+      else if (cmd === 'ls') response = 'identity.exe  b-sides.log  network.sh  hidden-secrets.txt';
+      else if (cmd === 'clear') {
+        const pTags = terminalOutput.querySelectorAll('p');
+        pTags.forEach(p => p.remove());
+        return;
+      }
+      else if (cmd === 'hack') {
+        response = 'Bypassing firewalls... Accessing mainframe... [SUCCESS]';
+        line.style.color = '#fff';
+      }
+      else if (cmd === 'date') response = new Date().toString();
+      else if (cmd !== '') response = `Error: '${cmd}' is not recognized as an internal command.`;
+
+      if (response) {
+        const resLine = document.createElement('p');
+        resLine.innerText = response;
+        terminalOutput.insertBefore(resLine, terminalInput.parentElement);
+      }
+      terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+  });
+
+  // Dice Roller
+  document.getElementById('roll-dice')?.addEventListener('click', () => {
+    const d1 = Math.floor(Math.random() * 6) + 1;
+    const d2 = Math.floor(Math.random() * 6) + 1;
+    const total = d1 + d2;
+
+    showModal('Rolling dice...');
+    const modalBody = document.getElementById('modal-text');
+    modalBody.innerHTML = '<div class="dice-animation">🎲 🎲</div>';
+
+    setTimeout(() => {
+      modalBody.innerHTML = `You rolled a <strong>${d1}</strong> and a <strong>${d2}</strong>.<br>Total: <strong>${total}</strong>`;
+    }, 1000);
+  });
+
+  // Pattern Switcher
+  const patternControllers = document.querySelectorAll('.pattern-ctrl');
+  document.body.classList.add('pattern-dither'); // Default
+
+  patternControllers.forEach(ctrl => {
+    ctrl.addEventListener('click', () => {
+      document.body.className = ''; // Reset
+      document.body.classList.add(`pattern-${ctrl.getAttribute('data-pattern')}`);
+    });
+  });
+
+  // Trash Icon Logic
+  document.getElementById('trash-icon')?.addEventListener('click', () => {
+    showModal("Trash is empty. You're a very organized user.");
+  });
+
   // Clock Update
   function updateClock() {
     const clock = document.getElementById('system-clock');
@@ -169,14 +245,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function bringToFront(win) {
+    // Increment even if active to ensure it stays on top of newly opened windows
+    highestZIndex++;
+    win.style.zIndex = highestZIndex;
+
     if (win.classList.contains('active')) return;
 
     windows.forEach(w => {
       w.classList.remove('active');
     });
 
-    highestZIndex++;
-    win.style.zIndex = highestZIndex;
     win.classList.add('active');
   }
 });
