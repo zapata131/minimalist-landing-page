@@ -18,7 +18,7 @@ jobs:
         run: |
           mkdir deploy
           cp index.html styles.css script.js deploy/
-          cp -r icons/ deploy/ || true
+          cp -r icons/ assets/ desktop/ deploy/ || true
 
       - name: 🚀 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
